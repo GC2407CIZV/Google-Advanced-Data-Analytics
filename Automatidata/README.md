@@ -22,8 +22,7 @@ Automatidata/
 ├── 2017_Yellow_Taxi_Trip_Data.csv
 
 ├── Automatidata_project_lab.ipynb
-
-├── Course 5 PACE strategy document.docx
+├── PACE strategy document.docx
 
 └── README.md
 
