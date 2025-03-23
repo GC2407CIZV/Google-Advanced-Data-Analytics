@@ -75,4 +75,4 @@ The dataset (`HR_capstone_dataset.csv`) contains 15,000 rows and 10 columns:
 
 ## Author
 
-[Your Name]
+[Gregory Charles]
