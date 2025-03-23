@@ -18,9 +18,13 @@ The goal of this project was to develop a multiple linear regression model to pr
 ## Project Structure
 
 Automatidata/
+
 ├── 2017_Yellow_Taxi_Trip_Data.csv
+
 ├── Automatidata_project_lab.ipynb
+
 ├── Course 5 PACE strategy document.docx
+
 └── README.md
 
 
