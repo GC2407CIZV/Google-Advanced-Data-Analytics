@@ -8,11 +8,11 @@ The HR department at Salifort Motors is concerned about high employee turnover r
 
 ## Files
 
-* **`Activity_ Course 7 Salifort Motors project lab.ipynb`**: Jupyter Notebook containing the complete data analysis, model building, and evaluation process.
-* **`Course 7 PACE strategy document.pdf`**: PDF document detailing the project's planning, analysis, construction, evaluation, and execution stages using the PACE methodology.
+* **`Salifort Motors project lab.ipynb`**: Jupyter Notebook containing the complete data analysis, model building, and evaluation process.
+* **`PACE strategy document.pdf`**: PDF document detailing the project's planning, analysis, construction, evaluation, and execution stages using the PACE methodology.
 * **`Executive summary.pdf`**: PDF document summarizing the project's findings, recommendations, and actionable steps for stakeholders.
 * **`HR_capstone_dataset.csv`**: The dataset used for analysis, containing employee survey data.
-* **`Activity overview.pdf`**: Overview of the activity and the project scope.
+* **`Project overview.pdf`**: Overview of the activity and the project scope.
 * **`README.md`**: This file, providing an overview of the project.
 
 ## Methodology
@@ -70,9 +70,9 @@ The dataset (`HR_capstone_dataset.csv`) contains 15,000 rows and 10 columns:
 
 1.  Clone this repository to your local machine.
 2.  Ensure you have Python and the required libraries installed. You can install them using `pip install pandas numpy scikit-learn matplotlib seaborn xgboost`.
-3.  Open and run the `Activity_ Course 7 Salifort Motors project lab.ipynb` Jupyter Notebook to reproduce the analysis and modeling.
-4.  Review the `Course 7 PACE strategy document.pdf` and `Executive summary.pdf` for detailed insights and recommendations.
+3.  Open and run the `Salifort Motors project lab.ipynb` Jupyter Notebook to reproduce the analysis and modeling.
+4.  Review the `PACE strategy document.pdf` and `Executive summary.pdf` for detailed insights and recommendations.
 
 ## Author
 
-[Gregory Charles]
+Gregory Charles
