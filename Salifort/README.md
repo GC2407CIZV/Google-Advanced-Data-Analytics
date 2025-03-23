@@ -12,7 +12,7 @@ The HR department at Salifort Motors is concerned about high employee turnover r
 * **`PACE strategy document.pdf`**: PDF document detailing the project's planning, analysis, construction, evaluation, and execution stages using the PACE methodology.
 * **`Executive summary.pdf`**: PDF document summarizing the project's findings, recommendations, and actionable steps for stakeholders.
 * **`HR_capstone_dataset.csv`**: The dataset used for analysis, containing employee survey data.
-* **`Project overview.pdf`**: Overview of the activity and the project scope.
+* **`Project Overview.pdf`**: Overview of the activity and the project scope.
 * **`README.md`**: This file, providing an overview of the project.
 
 ## Methodology
