@@ -1,29 +1,33 @@
-# Salifort Motors Employee Turnover Prediction
+# Salifort Motors Employee Turnover Prediction Project
+
+This repository contains the analysis and predictive modeling for employee turnover at Salifort Motors, a fictional consulting firm. This project aims to provide data-driven insights to the Human Resources (HR) department to improve employee retention.
 
 ## Project Overview
 
-This capstone project focuses on analyzing employee survey data from Salifort Motors, a large consulting firm, to provide data-driven suggestions to the Human Resources (HR) department regarding employee retention. The goal is to build predictive models that can identify factors influencing employee turnover and offer actionable insights.
+The HR department at Salifort Motors is concerned about high employee turnover rates. They seek to understand the key factors contributing to this issue and develop effective retention strategies. This project utilizes employee survey data to build predictive models and identify actionable insights.
 
-## Description and Deliverables
+## Files
 
-Upon completion, the project will deliver:
+* **`Activity_ Course 7 Salifort Motors project lab.ipynb`**: Jupyter Notebook containing the complete data analysis, model building, and evaluation process.
+* **`Course 7 PACE strategy document.pdf`**: PDF document detailing the project's planning, analysis, construction, evaluation, and execution stages using the PACE methodology.
+* **`Executive summary.pdf`**: PDF document summarizing the project's findings, recommendations, and actionable steps for stakeholders.
+* **`HR_capstone_dataset.csv`**: The dataset used for analysis, containing employee survey data.
+* **`Activity overview.pdf`**: Overview of the activity and the project scope.
+* **`README.md`**: This file, providing an overview of the project.
 
-1.  **Executive Summary:** A one-page summary for external stakeholders, outlining the project's findings and recommendations.
-2.  **Code Notebook:** A comprehensive Jupyter Notebook detailing the data analysis, model building, and evaluation process.
+## Methodology
 
-The project requires selecting either a regression model or machine learning model to predict employee turnover. The deliverables will include model evaluation, data visualizations, ethical considerations, and troubleshooting resources.
+This project follows the PACE (Plan, Analyze, Construct, Evaluate, Execute) methodology:
 
-## Company Background
-
-Salifort Motors is a large consulting firm concerned about high employee turnover rates. The HR department aims to improve employee satisfaction and retention by analyzing employee survey data.
-
-## Business Case
-
-The HR department seeks to understand the factors driving employee turnover to develop effective retention strategies. Predicting which employees are likely to leave can help identify and address these factors, reducing the costs associated with hiring and training new employees.
+1.  **Plan:** Define the problem, stakeholders, goals, and initial data observations.
+2.  **Analyze:** Perform exploratory data analysis (EDA), clean the data, and identify key relationships and patterns.
+3.  **Construct:** Build and train predictive models (Logistic Regression, Decision Tree, XGBoost, Random Forest, SVM).
+4.  **Evaluate:** Evaluate model performance using relevant metrics (accuracy, precision, recall, F1-score, AUC-ROC, Cohen's Kappa).
+5.  **Execute:** Interpret model results, provide actionable recommendations, and conduct simulated A/B testing.
 
 ## Data
 
-The dataset contains 15,000 rows and 10 columns, including:
+The dataset (`HR_capstone_dataset.csv`) contains 15,000 rows and 10 columns:
 
 * `satisfaction_level`: Employee-reported job satisfaction level [0–1]
 * `last_evaluation`: Score of employee's last performance review [0–1]
@@ -36,122 +40,39 @@ The dataset contains 15,000 rows and 10 columns, including:
 * `Department`: The employee's department
 * `salary`: The employee's salary (U.S. dollars)
 
-## Methodology
+## Key Findings
 
-This project follows the PACE (Plan, Analyze, Construct, Evaluate, Execute) methodology:
+* XGBoost (tuned) and Random Forest models demonstrated the best performance in predicting employee turnover.
+* Key factors influencing turnover include employee satisfaction, workload (number of projects, average monthly hours), tenure, and salary.
+* Simulated A/B tests suggest that mentorship programs, flexible work hours, and enhanced training can significantly improve employee retention and satisfaction.
+* Logistic Regression showed poor performance due to class imbalance and multicollinearity.
 
-### Plan
+## Recommendations
 
-* **Stakeholders:** Senior Leadership Team, HR Department, Department Managers, Employees.
-* **Goals:** Predict employee turnover, identify contributing factors, and provide retention recommendations.
-* **Initial Observations:** Analysis of data distributions, correlations, and potential issues (missing values, outliers).
-* **Resources:** Python libraries (pandas, NumPy, scikit-learn, matplotlib, seaborn, XGBoost), online documentation, tutorials.
-* **Ethical Considerations:** Data privacy, bias awareness, transparency, responsible interpretation.
+* Implement the tuned XGBoost model for proactive identification of at-risk employees.
+* Focus on improving employee satisfaction, managing workloads, and ensuring competitive salaries.
+* Develop targeted retention strategies for high-turnover departments.
+* Conduct real-world A/B testing to evaluate the effectiveness of HR interventions.
+* Enhance data collection and monitoring systems.
+* Prioritize ethical considerations and transparency in model usage.
 
-### Analyze
+## Tools and Technologies
 
-* **EDA (Exploratory Data Analysis):** Analyzing relationships between variables, data distributions, and identifying patterns.
-* **Data Cleaning:** Handling missing values, duplicates, and outliers.
-* **Feature Engineering:** Transforming and creating new features to improve model performance.
-* **Visualization:** Creating visualizations to understand data patterns and relationships.
-* **Observations:**
-    * Strong negative correlation between satisfaction and turnover.
-    * Higher average monthly hours and lower salaries correlate with higher turnover.
-    * Imbalanced target variable ('left').
-    * Skewed satisfaction levels.
-    * Outliers in tenure, monthly hours, and number of projects.
-* **Transformations:** Renaming columns, dropping duplicates.
-* **Resources:** Python libraries, documentation, online tutorials, YouTube.
-* **Ethical Considerations:** Data privacy, bias awareness, transparency, data accuracy.
-* **Additional EDA:**
-    * Analysis of employee turnover rates before and after removing duplicates.
-    * Correlation heatmap to visualize relationships between numerical features.
-    * Distribution plots for 'left' (turnover), satisfaction levels, and other key variables.
-    * Count plots and box plots to examine relationships between categorical and numerical variables with turnover.
-    * Pair plot to visualize pairwise relationships between numerical features and turnover.
-    * Statistical analysis to quantify relationships (e.g., correlation coefficients, chi-squared tests).
-* **Insights from Data Analysis:**
-    * **Correlation Analysis:**
-        * Strong negative correlation between satisfaction and turnover (-0.35).
-        * Positive correlation between average monthly hours and turnover (0.07).
-        * Positive correlation between tenure and turnover (0.17).
-        * Negative correlation between work accidents and turnover (-0.12).
-        * High correlation between number of projects and average monthly hours.
-        * Positive correlation between last evaluation and number of projects.
-    * **Distribution of 'left' (Turnover):** Imbalanced data with more employees staying (10,000) than leaving (1,991).
-    * **Distribution of Satisfaction Levels:** Mean satisfaction around 0.63, skewed towards low levels.
-    * **Department vs. Left:** Sales, technical, and support have high turnover; management has low turnover.
-    * **Salary vs. Left:** Low salaries correlate with high turnover; high salaries with low turnover.
-    * **Tenure vs. Left:** Employees who left had slightly higher average tenure.
-    * **Average Monthly Hours vs. Left:** Employees who left worked slightly longer hours.
-    * **Number of Projects vs. Left:** Employees who left had slightly more projects.
-    * **Overall Insights:** Low satisfaction, low salary, and high workload are key turnover drivers.
+* Python
+* Pandas
+* NumPy
+* Scikit-learn
+* Matplotlib
+* Seaborn
+* XGBoost
 
-### Construct
+## Getting Started
 
-* **Model Selection:** Logistic Regression, Decision Tree, XGBoost, Random Forest, SVM.
-* **Model Training:** Training models on the prepared data.
-* **Feature Selection:** Using all available features, one-hot encoding categorical variables.
-* **Hyperparameter Tuning:** RandomizedSearchCV for XGBoost.
-* **Model Assumptions:**
-    * Logistic Regression: Outcome variable categorical, independent observations, no severe multicollinearity (partially met), no extreme outliers, linear relationship between X and logit (not explicitly checked), sufficient sample size (assumed).
-    * **Findings:**
-        * XGBoost (tuned) and Random Forest showed best performance.
-        * Logistic Regression had poor performance, likely due to multicollinearity and class imbalance.
-        * XGBoost Identified satisfaction, number of projects, and tenure as the most important features.
+1.  Clone this repository to your local machine.
+2.  Ensure you have Python and the required libraries installed. You can install them using `pip install pandas numpy scikit-learn matplotlib seaborn xgboost`.
+3.  Open and run the `Activity_ Course 7 Salifort Motors project lab.ipynb` Jupyter Notebook to reproduce the analysis and modeling.
+4.  Review the `Course 7 PACE strategy document.pdf` and `Executive summary.pdf` for detailed insights and recommendations.
 
-### Evaluate
+## Author
 
-* **Model Evaluation:** Accuracy, precision, recall, F1-score, AUC-ROC, Cohen's Kappa.
-* **Interpretation:** XGBoost (tuned) had the best performance.
-* **Validation:** Ensuring model robustness and generalizability.
-* **Results:**
-    * XGBoost (tuned) had the highest AUC-ROC (0.9829), Cohen's Kappa (0.9258), and balanced accuracy (0.9481).
-    * Logistic Regression had the lowest performance, with a low Cohen's Kappa (0.1979).
-
-### Execute
-
-* **Interpretation:**
-    * XGBoost (tuned) is the preferred model for deployment.
-    * Logistic Regression is unreliable due to class imbalance and multicollinearity.
-    * Hyperparameter tuning is crucial for model performance.
-* **Actionable Steps:**
-    * Implement strategies to improve employee satisfaction.
-    * Review and adjust salary structures.
-    * Manage employee workloads to prevent burnout.
-    * Develop targeted retention plans for high-turnover departments.
-    * Investigate the causes of long tenured employees leaving.
-    * Address multicollinearity and class imbalance issues in future modeling.
-* **A/B Testing:**
-    * Simulated A/B tests to evaluate HR interventions (mentorship, flexible hours, salary, training).
-    * Demonstrated significant impact of mentorship, flexible hours, and training.
-    * Highlighted the importance of real-world A/B testing.
-* **Ethical Considerations:**
-    * Ensure data privacy and prevent discriminatory outcomes.
-    * Communicate model usage transparently to employees.
-    * Continual evaluation of the model's generalizability and external validation.
-* **Model Results Summary:**
-    * XGBoost (tuned) is the most reliable model for predicting employee turnover.
-    * Focus on key predictors (satisfaction, workload, tenure).
-    * Implement targeted retention strategies and HR interventions.
-    * Enhance data collection and monitoring.
-    * Maintain ethical considerations and transparency.
-* **Recommendations:**
-    * Implement XGBoost model in HR.
-    * Focus on key predictors of turnover.
-    * Develop targeted retention strategies.
-    * Use A/B testing for HR programs.
-    * Enhance data collection and monitoring.
-    * Prioritize ethical considerations and transparency.
-* **Next Steps:**
-    * Calculate costs and benefits of retention strategies.
-    * Run a pilot program.
-    * Build an HR dashboard.
-    * Investigate department and job issues.
-    * Keep the model updated.
-    * Gather employee feedback.
-    * Conduct real-world A/B tests.
-
-## Files
-
-* `PACE_Strategy_Document.md`: Contains the answers to
+[Your Name]
